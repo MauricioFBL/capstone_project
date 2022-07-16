@@ -15,12 +15,12 @@ STABILITY_STATE = "stable"
 CLOUD_PROVIDER = "aws"
 
 # AWS constants
-AWS_CONN_ID = "project_s3_conn"
+AWS_CONN_ID = "s3_conn"
 S3_BUCKET_NAME = "s3-data-bootcamp-elchemarug0102003"
 S3_KEY_NAME = "user_purchase.csv"
 
 # Postgres constants
-POSTGRES_CONN_ID = "project_post_conn"
+POSTGRES_CONN_ID = "postgre_conn"
 POSTGRES_SCHEMA_NAME = "users_purchase_data"
 POSTGRES_TABLE_NAME = "user_purchase"
 
