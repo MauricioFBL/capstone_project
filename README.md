@@ -22,7 +22,7 @@ processes or a software registries. The data is uploaded on AWS S3 and then
 
 directories and file structure:
 ```
-    LH4_AMPPS_DASH/
+    CAPSTONE PROJECT/
     |---infraestructure/
           |---aws
           |---kubernetes
