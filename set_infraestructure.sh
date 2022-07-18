@@ -6,6 +6,7 @@ aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terr
 export NFS_SERVER=$(terraform output -raw efs)
 cd ../kubernetes
 kubectl create namespace storage
+helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
 helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
     --namespace storage \
     --set nfs.server=$NFS_SERVER \

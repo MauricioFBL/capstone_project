@@ -27,21 +27,25 @@ directories and file structure:
           |---aws
           |---kubernetes
     |---dags/
+    |---notebooks/
+    |---scripts/
     |---.gitignore
     |---README.md
     |---requirements.txt
 ```
+This project runs on ubuntu20.04 and need the next tools to run aws_cli, helm, kubectl,
+and terraform
+
+To setup the infraestructure run de [set_infraestructure.sh](set_infraestructure.sh) file
+
+`sh set_infraestructure.sh`
+
+This will run the necesary command to set uo the infraestructure for the dags in AWS
+
 
 It requires Python 3.8.10 or higher, check your Python version first.
 
-The [requirements.txt](requirements.txt) should list and install all the required Python 
-libraries that the project depend on, and they can be installed using:
+The [requirements.txt](requirements.txt) should list and install all the required
+Python libraries that the project depend on, and they can be installed using:
 
 `pip install -r requirements.txt`
-
-To create the project you have to execute [create_sos_soe.py](create_sos_soe.py) file:
-
-
-
-This will run the ETL process, and write the output to the specified output
-location.
