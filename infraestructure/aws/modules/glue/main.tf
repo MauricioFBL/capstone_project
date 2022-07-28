@@ -6,7 +6,7 @@ resource "aws_glue_job" "log_tranform" {
     number_of_workers = "2"
 
 command {
-    script_location = "s3://s3-data-bootcamp-maufbl0808109231/scripts/logs_transform.py"
+    script_location = "s3://s3-data-bootcamp-maufbl0808109231/scripts/log_transformation.py.py"
 }
 
 default_arguments = { 
@@ -22,7 +22,7 @@ resource "aws_glue_job" "movie_transform" {
     number_of_workers = "2"
 
 command {
-    script_location = "s3://s3-data-bootcamp-maufbl0808109231/scripts/revs_transform.py"
+    script_location = "s3://s3-data-bootcamp-maufbl0808109231/scripts/movie_transformation.py.py"
 }
 
 default_arguments = { 
