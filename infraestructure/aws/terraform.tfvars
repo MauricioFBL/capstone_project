@@ -61,12 +61,12 @@ db_username = "dbuser"
 
 db_password = "dbpassword"
 
-publicly_accessible = false
+publicly_accessible = true
 
 #### S3 variables ####
 bucket = "s3-data-bootcamp-maufbl0808109231"
 
 acl = "private"
 
-versioning = true
+versioning = false
 

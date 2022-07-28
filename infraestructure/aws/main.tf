@@ -13,7 +13,7 @@ module "eks" {
   source = "./modules/eks"
 
   vpc_id_eks = module.networking.vpc_id
-  subnet = module.networking.private_subnets_ids
+  subnet     = module.networking.private_subnets_ids
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
@@ -29,7 +29,7 @@ module "eks" {
 
 #   vpc_id_ec2                     = module.networking.vpc_id
 #   subnet_id                      = module.networking.public_subnets_ids
-  
+
 #   number_of_instances            = var.number_of_instances
 #   ec2_name                       = var.ec2_name
 #   ec2_security_group_name        = var.ec2_security_group_name
@@ -41,8 +41,8 @@ module "eks" {
 module "rds" {
   source = "./modules/rds"
 
-  vpc_id_rds        = module.networking.vpc_id
-  subnets_rds        = module.networking.private_subnets_ids
+  vpc_id_rds  = module.networking.vpc_id
+  subnets_rds = module.networking.private_subnets_ids
 
   allocated_storage   = var.allocated_storage
   db_engine           = var.db_engine
@@ -58,10 +58,17 @@ module "rds" {
 module "s3" {
   source = "./modules/s3"
 
-  vpc_id_s3   = module.networking.vpc_id
+  vpc_id_s3 = module.networking.vpc_id
   subnet_s3 = module.networking.private_subnets_ids
 
-  bucket = var.bucket
-  acl           = var.acl
-  versioning    = var.versioning
+  bucket     = var.bucket
+  acl        = var.acl
+  versioning = var.versioning
 }
+
+module "glue" {
+  source = "./modules/glue"
+
+  vpc_id_glue = module.networking.vpc_id
+  subnet_glue = module.networking.private_subnets_ids
+}   

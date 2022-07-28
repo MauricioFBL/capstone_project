@@ -10,7 +10,7 @@ from airflow.utils.dates import days_ago
 from airflow.utils.trigger_rule import TriggerRule
 
 # General constants
-DAG_ID = "aws_database_ingestion_workflow"
+DAG_ID = "aws_s3_2_postgre"
 STABILITY_STATE = "stable"
 CLOUD_PROVIDER = "aws"
 
