@@ -53,3 +53,5 @@ log_review_df = log_review_df.withColumn(
 log_review_df = log_review_df.withColumn(
     'phoneNumber', split(log_review_df['log'],
                          ';').getItem(5))
+
+log_review_df.write.mode('overwrite').parquet(bucket + 'stage/log_reviews')
