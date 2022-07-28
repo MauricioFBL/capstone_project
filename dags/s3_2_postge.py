@@ -17,7 +17,7 @@ CLOUD_PROVIDER = "aws"
 # AWS constants
 AWS_CONN_ID = "s3_conn"
 S3_BUCKET_NAME = "s3-data-bootcamp-maufbl0808109231"
-S3_KEY_NAME = "user_purchase.csv"
+S3_KEY_NAME = "raw/user_purchase.csv"
 
 # Postgres constants
 POSTGRES_CONN_ID = "postgre_conn"

@@ -28,7 +28,8 @@ log_review_df = (spark
       .csv(bucket + path_log))
 
 log_review_df = log_review_df.withColumn('log', regexp_replace(
-    'log', '<reviewlog><log><logDate>', '')).withColumn('log', regexp_replace(
+    'log', '<reviewlog><log><logDate>', '')
+            ).withColumn('log', regexp_replace(
         'log', '</phoneNumber></log></reviewlog>', ''))
 
 log_review_df = log_review_df.withColumn('log', regexp_replace(
